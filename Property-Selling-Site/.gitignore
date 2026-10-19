@@ -6,3 +6,21 @@ rbac/users/*/*.key
 rbac/users/*/*.kubeconfig
 rbac/users/*/*.crt
 rbac/users/*/*.csr
+
+# Real credentials
+secrets.env
+.env
+.env.*
+!.env.example
+
+# Private keys and generated certificates
+rbac/users/*/*.key
+rbac/users/*/*.crt
+rbac/users/*/*.csr
+rbac/users/*/*.kubeconfig
+rbac/users/ca.crt
+
+# Secret YAML files containing real credentials
+old-layout/minio-secret.yml
+old-layout/postgres-secret.yml
+old-layout/server-secret.yml
