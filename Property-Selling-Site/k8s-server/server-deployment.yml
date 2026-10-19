@@ -1,0 +1,47 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: server-deployment
+  namespace: urban-hive-backend
+
+  labels:
+    app: server
+
+spec:
+  replicas: 1
+
+  selector:
+    matchLabels:
+      app: server
+
+  template:
+    metadata:
+      labels:
+        app: server
+
+    spec:
+      containers:
+        - name: server-container
+
+          image: raweel1/property-selling-backend:latest
+          imagePullPolicy: Always
+
+          ports:
+            - containerPort: 4000
+
+          envFrom:
+            - configMapRef:
+                name: server-config
+
+            - secretRef:
+                name: server-secret
+
+          resources:
+            requests:
+              cpu: "100m"
+              memory: "256Mi"
+
+            limits:
+              cpu: "500m"
+              memory: "512Mi"

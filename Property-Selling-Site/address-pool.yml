@@ -1,0 +1,17 @@
+apiVersion: metallb.io/v1beta1
+kind: IPAddressPool
+metadata:
+  name: urban-hive-pool
+  namespace: metallb-system
+spec:
+  addresses:
+    - 10.11.119.245-10.11.119.250
+---
+apiVersion: metallb.io/v1beta1
+kind: L2Advertisement
+metadata:
+  name: urban-hive-l2
+  namespace: metallb-system
+spec:
+  ipAddressPools:
+    - urban-hive-pool

@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: urban-hive-frontend
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: urban-hive-backend
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: urban-hive-postgres
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: urban-hive-minio

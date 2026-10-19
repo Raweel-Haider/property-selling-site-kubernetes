@@ -1,0 +1,8 @@
+rbac/users/*/*.key
+rbac/users/*/*.kubeconfig
+secrets.env
+old-layout/
+rbac/users/*/*.key
+rbac/users/*/*.kubeconfig
+rbac/users/*/*.crt
+rbac/users/*/*.csr
